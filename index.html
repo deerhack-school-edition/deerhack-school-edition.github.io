@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeerHack — School Edition 2026 | Coming Soon</title>
+  <meta name="description"
+    content="DeerHack School Edition 2026 is coming. A hackathon where students debug the future. Stay tuned." />
+  <meta property="og:title" content="DeerHack — School Edition 2026" />
+  <meta property="og:description" content="Where deers debug the future. Coming Soon." />
+  <meta name="theme-color" content="#121212" />
+
+  <!-- Google Fonts: BBH Bartle (display), Inter (body), Share Tech Mono (accent/pixel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:wght@400;600&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* =========================================================
+       CSS CUSTOM PROPERTIES — Brand Tokens
+    ========================================================= */
+    :root {
+      --color-black: #121212;
+      --color-white: #ffffff;
+      --color-accent: #58C6C3;
+      --color-accent2: #C35881;
+      --color-accent3: #58C69B;
+      --color-muted: rgba(255, 255, 255, 0.38);
+
+      --font-display: 'BBH Bartle', sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+
+      --logo-margin: 40px;
+      --logo-padding: 15px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100dvh;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(88, 198, 195, 0.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .motif {
+      position: fixed;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Motif positions & dimensions matching SVG aspect ratios - organically scattered to look random without overlapping center content or each other */
+    .motif-v1 {
+      top: clamp(40px, 6dvh, 80px);
+      left: clamp(30px, 4vw, 70px);
+      width: 48px;
+      height: 96px;
+    }
+
+    .motif-v2 {
+      bottom: clamp(60px, 8dvh, 120px);
+      right: clamp(20px, 3vw, 50px);
+      width: 180px;
+      height: 90px;
+    }
+
+    .motif-v3 {
+      top: clamp(250px, 35dvh, 350px);
+      right: clamp(20px, 3vw, 50px);
+      width: 100px;
+      height: 111px;
+    }
+
+    .motif-v4 {
+      top: clamp(420px, 60dvh, 500px);
+      right: clamp(40px, 5vw, 90px);
+      width: 60px;
+      height: 60px;
+    }
+
+    .motif-v5 {
+      bottom: clamp(250px, 35dvh, 350px);
+      left: clamp(20px, 3vw, 50px);
+      width: 75px;
+      height: 100px;
+    }
+
+    .motif-v6 {
+      top: 50%;
+      left: 50%;
+      width: clamp(180px, 20vw, 360px);
+      height: clamp(720px, 80vw, 1440px);
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    /* Self-draw pixel-by-pixel animation system */
+    .motif path {
+      opacity: 0;
+      animation: pixelDraw 8s ease-in-out infinite both;
+    }
+
+    @keyframes pixelDraw {
+      0%   { opacity: 0; }
+      2%   { opacity: 0.95; } /* bright flash */
+      8%   { opacity: 0.20; } /* settle to dim brand glow */
+      60%  { opacity: 0.20; } /* hold visibility */
+      75%  { opacity: 0; }    /* fade out */
+      100% { opacity: 0; }
+    }
+
+    /* Staggered delay classes for up to 35 paths */
+    .motif path:nth-child(1) { animation-delay: 0.10s; }
+    .motif path:nth-child(2) { animation-delay: 0.20s; }
+    .motif path:nth-child(3) { animation-delay: 0.30s; }
+    .motif path:nth-child(4) { animation-delay: 0.40s; }
+    .motif path:nth-child(5) { animation-delay: 0.50s; }
+    .motif path:nth-child(6) { animation-delay: 0.60s; }
+    .motif path:nth-child(7) { animation-delay: 0.70s; }
+    .motif path:nth-child(8) { animation-delay: 0.80s; }
+    .motif path:nth-child(9) { animation-delay: 0.90s; }
+    .motif path:nth-child(10) { animation-delay: 1.00s; }
+    .motif path:nth-child(11) { animation-delay: 1.10s; }
+    .motif path:nth-child(12) { animation-delay: 1.20s; }
+    .motif path:nth-child(13) { animation-delay: 1.30s; }
+    .motif path:nth-child(14) { animation-delay: 1.40s; }
+    .motif path:nth-child(15) { animation-delay: 1.50s; }
+    .motif path:nth-child(16) { animation-delay: 1.60s; }
+    .motif path:nth-child(17) { animation-delay: 1.70s; }
+    .motif path:nth-child(18) { animation-delay: 1.80s; }
+    .motif path:nth-child(19) { animation-delay: 1.90s; }
+    .motif path:nth-child(20) { animation-delay: 2.00s; }
+    .motif path:nth-child(21) { animation-delay: 2.10s; }
+    .motif path:nth-child(22) { animation-delay: 2.20s; }
+    .motif path:nth-child(23) { animation-delay: 2.30s; }
+    .motif path:nth-child(24) { animation-delay: 2.40s; }
+    .motif path:nth-child(25) { animation-delay: 2.50s; }
+    .motif path:nth-child(26) { animation-delay: 2.60s; }
+    .motif path:nth-child(27) { animation-delay: 2.70s; }
+    .motif path:nth-child(28) { animation-delay: 2.80s; }
+    .motif path:nth-child(29) { animation-delay: 2.90s; }
+    .motif path:nth-child(30) { animation-delay: 3.00s; }
+    .motif path:nth-child(31) { animation-delay: 3.10s; }
+    .motif path:nth-child(32) { animation-delay: 3.20s; }
+    .motif path:nth-child(33) { animation-delay: 3.30s; }
+    .motif path:nth-child(34) { animation-delay: 3.40s; }
+    .motif path:nth-child(35) { animation-delay: 3.50s; }
+
+    .page {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      padding: 40px 24px;
+      gap: 0;
+    }
+
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin: var(--logo-margin) 0;
+    }
+
+    .logo-mark-wrap {
+      padding: var(--logo-padding);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(88, 198, 195, 0.15);
+      border-radius: 18px;
+      background: radial-gradient(ellipse at 50% 30%, rgba(88, 198, 195, 0.06) 0%, transparent 70%);
+      margin-bottom: 28px;
+      transition: box-shadow 0.4s ease;
+    }
+
+    .logo-mark-wrap:hover {
+      box-shadow: 0 0 40px rgba(88, 198, 195, 0.18);
+    }
+
+    #logo-mark {
+      width: 120px;
+      height: 176px;
+      overflow: visible;
+      display: block;
+    }
+
+    .wordmark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wordmark-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      letter-spacing: 0.06em;
+      color: var(--color-white);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .wordmark-sub {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(0.7rem, 2vw, 0.95rem);
+      letter-spacing: 0.28em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+    }
+
+    .badge-wrap {
+      margin-top: 44px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coming-soon-badge {
+      font-family: var(--font-mono);
+      font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+      letter-spacing: 0.30em;
+      color: var(--color-black);
+      background: var(--color-accent);
+      padding: 7px 18px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      animation: badgeGlow 2.8s ease-in-out infinite;
+      will-change: box-shadow;
+    }
+
+    #badge-text {
+      display: inline;
+      white-space: nowrap;
+    }
+
+    #badge-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--color-black);
+      vertical-align: middle;
+      margin-left: 2px;
+      animation: blink 0.9s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes badgeGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0px rgba(88, 198, 195, 0);
+      }
+
+      50% {
+        box-shadow: 0 0 22px rgba(88, 198, 195, 0.55), 0 0 6px rgba(88, 198, 195, 0.3);
+      }
+    }
+
+    .tagline {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+      color: rgba(255, 255, 255, 0.70);
+      letter-spacing: 0.02em;
+      text-align: center;
+      max-width: 420px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--color-accent);
+      margin: 36px 0;
+      border-radius: 2px;
+      opacity: 0.5;
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      color: var(--color-muted);
+      transition: color 0.25s ease, border-color 0.25s ease, transform 0.22s ease, box-shadow 0.25s ease;
+    }
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .social-link:hover {
+      color: var(--color-accent);
+      border-color: rgba(88, 198, 195, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 22px rgba(88, 198, 195, 0.18);
+    }
+
+    .footer-note {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: rgba(255, 255, 255, 0.18);
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .motif-v3, .motif-v4 {
+        display: none;
+      }
+
+      .motif-v6 {
+        width: clamp(100px, 18vw, 180px);
+        height: clamp(400px, 72vw, 720px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .motif-v5 {
+        display: none;
+      }
+
+      .motif-v6 {
+        width: 80px;
+        height: 320px;
+      }
+
+      .motif-v1 {
+        width: 32px;
+        height: 64px;
+        top: 15px;
+        left: 15px;
+      }
+
+      .motif-v2 {
+        width: 60px;
+        height: 30px;
+        bottom: 15px;
+        right: 15px;
+      }
+
+      #logo-mark {
+        width: 88px;
+        height: 129px;
+      }
+
+      .logo-mark-wrap {
+        margin-bottom: 20px;
+      }
+
+      .social-row {
+        gap: 18px;
+      }
+
+      .social-link {
+        width: 38px;
+        height: 38px;
+      }
+
+      .footer-note {
+        font-size: 0.55rem;
+      }
+    }
+
+    .page>* {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .logo-section {
+      animation-delay: 0.05s;
+    }
+
+    .badge-wrap {
+      animation-delay: 0.25s;
+    }
+
+    .tagline {
+      animation-delay: 0.38s;
+    }
+
+    .divider {
+      animation-delay: 0.50s;
+    }
+
+    .social-row {
+      animation-delay: 0.62s;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Brand Glyph: Vector-1 (top-left) — dual-column zigzag -->
+  <svg class="motif motif-v1" viewBox="0 0 64 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M0 0H16V16H0V0Z" fill="#58C6C3"/>
+    <path d="M32 0H48V16H32V0Z" fill="#58C6C3"/>
+    <path d="M16 16H32V32H16V16Z" fill="#58C6C3"/>
+    <path d="M48 16H64V32H48V16Z" fill="#58C6C3"/>
+    <path d="M0 32H16V48H0V32Z" fill="#58C6C3"/>
+    <path d="M32 32H48V48H32V32Z" fill="#58C6C3"/>
+    <path d="M16 48H32V64H16V48Z" fill="#58C6C3"/>
+    <path d="M48 48H64V64H48V48Z" fill="#58C6C3"/>
+    <path d="M0 64H16V80H0V64Z" fill="#58C6C3"/>
+    <path d="M32 64H48V80H32V64Z" fill="#58C6C3"/>
+    <path d="M16 80H32V96H16V80Z" fill="#58C6C3"/>
+    <path d="M48 80H64V96H48V80Z" fill="#58C6C3"/>
+    <path d="M0 96H16V112H0V96Z" fill="#58C6C3"/>
+    <path d="M32 96H48V112H32V96Z" fill="#58C6C3"/>
+    <path d="M16 112H32V128H16V112Z" fill="#58C6C3"/>
+    <path d="M48 112H64V128H48V112Z" fill="#58C6C3"/>
+  </svg>
+
+  <!-- Brand Glyph: Vector-2 (bottom-right) — S-curve snake -->
+  <svg class="motif motif-v2" viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M32 32H48V48H32V32Z" fill="#58C6C3"/>
+    <path d="M48 48H64V64H48V48Z" fill="#58C6C3"/>
+    <path d="M32 64H48V80H32V64Z" fill="#58C6C3"/>
+    <path d="M16 64H32V80H16V64Z" fill="#58C6C3"/>
+    <path d="M0 48H16V64H0V48Z" fill="#58C6C3"/>
+    <path d="M0 32H16V48H0V32Z" fill="#58C6C3"/>
+    <path d="M0 16H16V32H0V16Z" fill="#58C6C3"/>
+    <path d="M16 0H32V16H16V0Z" fill="#58C6C3"/>
+    <path d="M32 0H48V16H32V0Z" fill="#58C6C3"/>
+    <path d="M48 0H64V16H48V0Z" fill="#58C6C3"/>
+    <path d="M64 16H80V32H64V16Z" fill="#58C6C3"/>
+    <path d="M80 32H96V48H80V32Z" fill="#58C6C3"/>
+    <path d="M80 48H96V64H80V48Z" fill="#58C6C3"/>
+    <path d="M96 64H112V80H96V64Z" fill="#58C6C3"/>
+    <path d="M112 64H128V80H112V64Z" fill="#58C6C3"/>
+    <path d="M128 48H144V64H128V48Z" fill="#58C6C3"/>
+    <path d="M144 32H160V48H144V32Z" fill="#58C6C3"/>
+    <path d="M144 16H160V32H144V16Z" fill="#58C6C3"/>
+    <path d="M128 0H144V16H128V0Z" fill="#58C6C3"/>
+    <path d="M112 16H128V32H112V16Z" fill="#58C6C3"/>
+  </svg>
+
+  <!-- Brand Glyph: Vector-3 (top-right) — complex antler shape -->
+  <svg class="motif motif-v3" viewBox="0 0 144 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M80 0H64V16H80V0Z" fill="#58C6C3"/>
+    <path d="M80 16H64V32H80V16Z" fill="#58C6C3"/>
+    <path d="M80 48H64V64H80V48Z" fill="#58C6C3"/>
+    <path d="M96 64H80V80H96V64Z" fill="#58C6C3"/>
+    <path d="M96 80H80V96H96V80Z" fill="#58C6C3"/>
+    <path d="M112 80H96V96H112V80Z" fill="#58C6C3"/>
+    <path d="M112 96H96V112H112V96Z" fill="#58C6C3"/>
+    <path d="M32 80H16V96H32V80Z" fill="#58C6C3"/>
+    <path d="M16 96H0V112H16V96Z" fill="#58C6C3"/>
+    <path d="M16 112H0V128H16V112Z" fill="#58C6C3"/>
+    <path d="M32 128H16V144H32V128Z" fill="#58C6C3"/>
+    <path d="M48 144H32V160H48V144Z" fill="#58C6C3"/>
+    <path d="M64 128H48V144H64V128Z" fill="#58C6C3"/>
+    <path d="M96 0H80V16H96V0Z" fill="#58C6C3"/>
+    <path d="M112 0H96V16H112V0Z" fill="#58C6C3"/>
+    <path d="M128 16H112V32H128V16Z" fill="#58C6C3"/>
+    <path d="M144 32H128V48H144V32Z" fill="#58C6C3"/>
+    <path d="M144 48H128V64H144V48Z" fill="#58C6C3"/>
+    <path d="M80 64H64V80H80V64Z" fill="#58C6C3"/>
+    <path d="M64 80H48V96H64V80Z" fill="#58C6C3"/>
+    <path d="M64 0H48V16H64V0Z" fill="#58C6C3"/>
+    <path d="M64 32H48V48H64V32Z" fill="#58C6C3"/>
+    <path d="M48 0H32V16H48V0Z" fill="#58C6C3"/>
+    <path d="M48 16H32V32H48V16Z" fill="#58C6C3"/>
+    <path d="M48 64H32V80H48V64Z" fill="#58C6C3"/>
+    <path d="M32 0H16V16H32V0Z" fill="#58C6C3"/>
+    <path d="M32 16H16V32H32V16Z" fill="#58C6C3"/>
+    <path d="M32 48H16V64H32V48Z" fill="#58C6C3"/>
+    <path d="M16 0H0V16H16V0Z" fill="#58C6C3"/>
+    <path d="M16 16H0V32H16V16Z" fill="#58C6C3"/>
+    <path d="M16 32H0V48H16V32Z" fill="#58C6C3"/>
+    <path d="M16 48H0V64H16V48Z" fill="#58C6C3"/>
+    <path d="M16 64H0V80H16V64Z" fill="#58C6C3"/>
+  </svg>
+
+  <!-- Brand Glyph: Vector-4 (right-center) — scattered pixel grid -->
+  <svg class="motif motif-v4" viewBox="0 0 97 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M0 0H16V16H0V0Z" fill="#58C6C3"/>
+    <path d="M32 32H48V48H32V32Z" fill="#58C6C3"/>
+    <path d="M0 64H16V80H0V64Z" fill="#58C6C3"/>
+    <path d="M65 64H81V80H65V64Z" fill="#58C6C3"/>
+    <path d="M49 64H65V80H49V64Z" fill="#58C6C3"/>
+    <path d="M64 0H80V16H64V0Z" fill="#58C6C3"/>
+    <path d="M0 16H16V32H0V16Z" fill="#58C6C3"/>
+    <path d="M32 48H48V64H32V48Z" fill="#58C6C3"/>
+    <path d="M0 80H16V96H0V80Z" fill="#58C6C3"/>
+    <path d="M65 80H81V96H65V80Z" fill="#58C6C3"/>
+    <path d="M64 16H80V32H64V16Z" fill="#58C6C3"/>
+    <path d="M16 0H32V16H16V0Z" fill="#58C6C3"/>
+    <path d="M48 32H64V48H48V32Z" fill="#58C6C3"/>
+    <path d="M16 64H32V80H16V64Z" fill="#58C6C3"/>
+    <path d="M16 48H32V64H16V48Z" fill="#58C6C3"/>
+    <path d="M32 16H48V32H32V16Z" fill="#58C6C3"/>
+    <path d="M64 32H80V48H64V32Z" fill="#58C6C3"/>
+    <path d="M81 64H97V80H81V64Z" fill="#58C6C3"/>
+    <path d="M80 0H96V16H80V0Z" fill="#58C6C3"/>
+    <path d="M16 16H32V32H16V16Z" fill="#58C6C3"/>
+    <path d="M48 48H64V64H48V48Z" fill="#58C6C3"/>
+    <path d="M16 80H32V96H16V80Z" fill="#58C6C3"/>
+    <path d="M81 80H97V96H81V80Z" fill="#58C6C3"/>
+    <path d="M80 16H96V32H80V16Z" fill="#58C6C3"/>
+  </svg>
+
+  <!-- Brand Glyph: Vector-5 (bottom-left) — diagonal staircase -->
+  <svg class="motif motif-v5" viewBox="0 0 96 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M0 0H16V16H0V0Z" fill="#58C6C3"/>
+    <path d="M0 16H16V32H0V16Z" fill="#58C6C3"/>
+    <path d="M0 32H16V48H0V32Z" fill="#58C6C3"/>
+    <path d="M0 48H16V64H0V48Z" fill="#58C6C3"/>
+    <path d="M0 64H16V80H0V64Z" fill="#58C6C3"/>
+    <path d="M0 80H32V96H0V80Z" fill="#58C6C3"/>
+    <path d="M16 0H32V16H16V0Z" fill="#58C6C3"/>
+    <path d="M32 16H48V32H32V16Z" fill="#58C6C3"/>
+    <path d="M48 32H64V48H48V32Z" fill="#58C6C3"/>
+    <path d="M64 48H80V64H64V48Z" fill="#58C6C3"/>
+    <path d="M80 64H96V80H80V64Z" fill="#58C6C3"/>
+    <path d="M64 80H80V96H64V80Z" fill="#58C6C3"/>
+    <path d="M80 96H88V112H80V96Z" fill="#58C6C3"/>
+    <path d="M32 96H48V112H32V96Z" fill="#58C6C3"/>
+    <path d="M32 80H40V96H32V80Z" fill="#58C6C3"/>
+    <path d="M48 112H80V128H48V112Z" fill="#58C6C3"/>
+  </svg>
+
+  <!-- Brand Glyph: Vector6 (left-center) — simple staircase pattern -->
+  <svg class="motif motif-v6" viewBox="0 0 32 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M0 0H16V16H0V0Z" fill="#58C6C3"/>
+    <path d="M16 16H32V32H16V16Z" fill="#58C6C3"/>
+    <path d="M0 32H16V48H0V32Z" fill="#58C6C3"/>
+    <path d="M16 48H32V64H16V48Z" fill="#58C6C3"/>
+    <path d="M0 64H16V80H0V64Z" fill="#58C6C3"/>
+    <path d="M16 80H32V96H16V80Z" fill="#58C6C3"/>
+    <path d="M0 96H16V112H0V96Z" fill="#58C6C3"/>
+    <path d="M16 112H32V128H16V112Z" fill="#58C6C3"/>
+  </svg>
+
+  <main class="page" role="main">
+
+    <section class="logo-section" aria-label="DeerHack logo">
+      <div class="logo-mark-wrap">
+        <!-- Real logo mark — Vector.svg
+             3 PCB-via circles + full deer silhouette, 193×283 viewBox, white fill -->
+        <svg id="logo-mark" viewBox="0 0 193 283" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="DeerHack logo mark — deer with three circuit-via antlers">
+          <!-- Circle 1 — left PCB via -->
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0476 0C34.2242 0 44.0952 9.85004 44.0952 22.0007C44.0952 34.1513 34.2242 44.0013 22.0476 44.0013C9.87105 44.0013 0 34.1513 0 22.0007C0 9.85004 9.87105 0 22.0476 0ZM22.0476 10.1542C15.491 10.1542 10.1758 15.458 10.1758 22.0007C10.1758 28.5433 15.491 33.8472 22.0476 33.8472C28.6042 33.8472 33.9194 28.5433 33.9194 22.0007C33.9194 15.458 28.6042 10.1542 22.0476 10.1542Z" fill="white"/>
+          <!-- Circle 2 — center PCB via -->
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M79.7106 0C91.8871 0 101.758 9.85004 101.758 22.0007C101.758 34.1513 91.8871 44.0013 79.7106 44.0013C67.534 44.0013 57.663 34.1513 57.663 22.0007C57.663 9.85004 67.534 0 79.7106 0ZM79.7106 10.1542C73.154 10.1542 67.8388 15.458 67.8388 22.0007C67.8388 28.5433 73.154 33.8472 79.7106 33.8472C86.2672 33.8472 91.5824 28.5433 91.5824 22.0007C91.5824 15.458 86.2672 10.1542 79.7106 10.1542Z" fill="white"/>
+          <!-- Circle 3 — right PCB via -->
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M137.374 0C149.55 0 159.421 9.85004 159.421 22.0007C159.421 34.1513 149.55 44.0013 137.374 44.0013C125.197 44.0013 115.326 34.1513 115.326 22.0007C115.326 9.85004 125.197 0 137.374 0ZM137.374 10.1542C130.817 10.1542 125.502 15.458 125.502 22.0007C125.502 28.5433 130.817 33.8472 137.374 33.8472C143.93 33.8472 149.245 28.5433 149.245 22.0007C149.245 15.458 143.93 10.1542 137.374 10.1542Z" fill="white"/>
+          <!-- Deer body + legs -->
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M31.375 55.8479L32.223 110.85L70.3823 84.618V34.6934H88.19V72.7714H117.869L128.893 77.0023V34.6934H146.701V113.388C161.116 104.08 181.468 83.7726 189.1 88.8489C201.82 110.849 182.316 135.389 146.701 134.543V282.624C97.5184 283.47 39.0084 282.624 12.721 282.624C12.7212 249.623 73.7742 230.161 92.4299 205.622H29.6807C11.3642 205.622 10.7424 183.621 12.721 172.621L92.4299 117.619C105.15 115.08 114.478 113.388 128.893 113.388C129.741 99.0029 117.021 91.3873 110.238 90.5412C106.17 90.5411 100.494 88.5988 92.4299 93.0798C65.7996 107.877 12.9144 144.563 12.721 144.697V34.6934H31.375V55.8479ZM101.758 147.235C95.2013 147.235 89.886 152.539 89.886 159.082C89.886 165.624 95.2013 170.928 101.758 170.928C108.314 170.928 113.63 165.624 113.63 159.082C113.63 152.539 108.314 147.235 101.758 147.235Z" fill="white"/>
+        </svg>
+      </div>
+
+      <div class="wordmark">
+        <h1 class="wordmark-title">DEER HACK</h1>
+        <p class="wordmark-sub">school edition 2026</p>
+      </div>
+    </section>
+
+    <div class="badge-wrap" aria-live="polite">
+      <span class="coming-soon-badge" role="status" aria-label="Coming Soon">
+        <span id="badge-text" aria-hidden="true"></span>
+        <span id="badge-cursor" aria-hidden="true"></span>
+      </span>
+    </div>
+
+    <!-- Replace with your real tagline -->
+    <p class="tagline">Something is cooking</p>
+
+    <div class="divider" role="presentation" aria-hidden="true"></div>
+
+    <nav class="social-row" aria-label="DeerHack social links">
+
+      <!-- SWAP href="#" values with real social profile URLs -->
+
+
+
+      <!-- Instagram -->
+      <a href="#" class="social-link" aria-label="DeerHack on Instagram" id="social-instagram" rel="noopener noreferrer"
+        target="_blank">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5" stroke="currentColor" fill="none" />
+          <circle cx="12" cy="12" r="4.5" stroke="currentColor" fill="none" />
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+
+      <!-- GitHub -->
+
+
+      <!-- Discord -->
+      <a href="#" class="social-link" aria-label="DeerHack on Discord" id="social-discord" rel="noopener noreferrer"
+        target="_blank">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path
+            d="M20.3 4.4A19.3 19.3 0 0 0 15.6 3a.1.1 0 0 0-.1 0 13.3 13.3 0 0 0-.6 1.2 17.9 17.9 0 0 0-5.3 0A12.5 12.5 0 0 0 9 3a.1.1 0 0 0-.1 0 19.2 19.2 0 0 0-4.7 1.4A20.2 20.2 0 0 0 1 17.5a19.4 19.4 0 0 0 5.9 2.9.1.1 0 0 0 .1 0 14 14 0 0 0 1.2-1.9.1.1 0 0 0-.1-.1 12.7 12.7 0 0 1-1.8-.9.1.1 0 0 1 0-.1l.4-.3a.1.1 0 0 1 .1 0 13.8 13.8 0 0 0 11.7 0 .1.1 0 0 1 .1 0l.4.3a.1.1 0 0 1 0 .1 12.3 12.3 0 0 1-1.8.9.1.1 0 0 0-.1.1 15.7 15.7 0 0 0 1.2 1.9.1.1 0 0 0 .1 0 19.3 19.3 0 0 0 5.9-2.9 20.1 20.1 0 0 0-3.2-13.1ZM8.7 15a2.2 2.2 0 0 1-2-2.3 2.2 2.2 0 0 1 2-2.3 2.2 2.2 0 0 1 2 2.3A2.2 2.2 0 0 1 8.7 15Zm6.7 0a2.2 2.2 0 0 1-2-2.3 2.2 2.2 0 0 1 2-2.3 2.2 2.2 0 0 1 2 2.3A2.2 2.2 0 0 1 15.4 15Z"
+            stroke="currentColor" fill="none" />
+        </svg>
+      </a>
+
+    </nav>
+
+  </main>
+
+  <p class="footer-note" aria-hidden="true">© 2026 DEERHACK &nbsp;·&nbsp; SCHOOL EDITION</p>
+
+  <noscript>
+    <style>
+      #badge-text::before {
+        content: "COMING SOON";
+      }
+
+      #badge-cursor {
+        display: none;
+      }
+    </style>
+  </noscript>
+
+  <script>
+    (function () {
+      'use strict';
+      var BADGE_TEXT = 'COMING SOON';
+      var REVEAL_DELAY = 680;
+      var CHAR_DELAY = 72;
+      var textEl = document.getElementById('badge-text');
+      var cursorEl = document.getElementById('badge-cursor');
+      if (!textEl || !cursorEl) return;
+      var charIndex = 0;
+      function revealNextChar() {
+        if (charIndex < BADGE_TEXT.length) {
+          textEl.textContent += BADGE_TEXT[charIndex];
+          charIndex++;
+          setTimeout(revealNextChar, CHAR_DELAY);
+        }
+      }
+      setTimeout(revealNextChar, REVEAL_DELAY);
+      var badgeEl = document.querySelector('[role="status"]');
+      if (badgeEl) badgeEl.setAttribute('aria-label', BADGE_TEXT);
+    })();
+  </script>
+
+</body>
+
+</html>
