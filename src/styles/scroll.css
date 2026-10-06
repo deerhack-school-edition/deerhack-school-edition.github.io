@@ -1,0 +1,13 @@
+.scroll {
+  animation-play-state: paused;
+}
+
+.scroll.play {
+  animation-play-state: running;
+}
+
+
+.stg {
+  animation-delay: calc(var(--i) * 1s);
+}
+
