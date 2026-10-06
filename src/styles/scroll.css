@@ -6,8 +6,6 @@
   animation-play-state: running;
 }
 
-
 .stg {
   animation-delay: calc(var(--i) * 1s);
 }
-

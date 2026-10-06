@@ -19,7 +19,7 @@ const Scroll = ({ children }) => {
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -35,4 +35,3 @@ const Scroll = ({ children }) => {
 };
 
 export default Scroll;
-

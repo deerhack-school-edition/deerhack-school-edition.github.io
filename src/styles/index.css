@@ -1,8 +1,32 @@
+@import url("https://fonts.cdnfonts.com/css/tecwo");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
+  --white: #fefefe;
+  --primary: #4696d2;
+  --secondary: #12295a;
+  --surface: #0f121f;
+  --background: #0c0e19;
 
+  --header: "TECWO", sans-serif;
+  --support: "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header);
+  color: var(--white);
 }
 
+html,
+body {
+  background-color: var(--background);
+}
+
+span{ 
+  font-family: var(--support);
+}

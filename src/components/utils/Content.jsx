@@ -1,11 +1,9 @@
-const Content = ({ children }) => {
-
+const Content = ({ children, id }) => {
   return (
-    <div className="content-sections">
+    <div className="content-section cflex" id={id}>
       {children}
     </div>
   );
 };
 
 export default Content;
-
