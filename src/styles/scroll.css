@@ -7,5 +7,6 @@
 }
 
 .stg {
-  animation-delay: calc(var(--i) * 1s);
+  animation-delay: calc(var(--i) * 0.15s);
+  transition: transform 1s ease-in-out;
 }

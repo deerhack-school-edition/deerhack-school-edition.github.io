@@ -1,9 +1,14 @@
 #hero {
-  background-color: #a9856e;
+  background-image: url("../assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+  padding: 0 5dvw;
 }
 
 .logo-mark {
   gap: 10px;
+  
 }
 
 .logo {
@@ -24,4 +29,12 @@
 .hero-logo-mark-indi {
   font-size: 1rem;
   font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  #hero{
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
