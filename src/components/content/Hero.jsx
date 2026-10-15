@@ -21,7 +21,9 @@ const Hero = () => {
         </div>
       
       </div>
-        <h1>...Website under construction...</h1>
+        <h1 className="stg rl" style={{ "--i": 18 }}>
+          ...Website under construction...
+        </h1>
     </Content>
   );
 };
