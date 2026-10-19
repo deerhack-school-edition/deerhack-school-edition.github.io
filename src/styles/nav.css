@@ -128,7 +128,7 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
-    background: rgba(#0C0E19,0.5);
+    background: rgba(#0c0e19, 0.5);
     pointer-events: auto;
   }
 
@@ -136,4 +136,3 @@
     display: flex;
   }
 }
-

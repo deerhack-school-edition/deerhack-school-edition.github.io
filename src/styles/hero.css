@@ -4,11 +4,14 @@
   background-position: center;
   justify-content: space-between;
   padding: 0 5dvw;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 5dvh;
 }
 
 .logo-mark {
   gap: 10px;
-  
 }
 
 .logo {
@@ -31,10 +34,22 @@
   font-weight: 300;
 }
 
+.login-box {
+  background-image: url("../assets/wave1.png");
+  background-size: auto;
+  background-position: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: var(--radii);
+  border: 5px solid var(--white);
+  height: 30dvh;
+  width: 25dvh;
+  gap: 5%;
+}
+
 @media (max-width: 768px) {
-  #hero{
+  #hero {
     flex-direction: column;
     justify-content: center;
   }
-
 }

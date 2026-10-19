@@ -60,10 +60,9 @@ const Navigation = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-       <h2>Register now!</h2>
+          <h2>Register now!</h2>
         </a>
       </div>
-         
     </header>
   );
 };

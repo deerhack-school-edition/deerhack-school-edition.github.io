@@ -19,11 +19,13 @@ const Hero = () => {
             school edition 2026
           </span>
         </div>
-      
       </div>
-        <h1 className="stg rl" style={{ "--i": 18 }}>
-          ...Website under construction...
-        </h1>
+      <div className="stg du login-box cflex" style={{ "--i": 18 }}>
+        <h1> Register Now!</h1>
+        <button className="btn-alt">
+          <a href="https://forms.gle/6F49urM94XsvT6yy9">Click Here!</a>
+        </button>
+      </div>
     </Content>
   );
 };
