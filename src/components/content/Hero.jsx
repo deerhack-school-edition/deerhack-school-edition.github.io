@@ -1,28 +1,44 @@
-import Logo from "../../assets/logo.svg";
-import wordMark from "../../assets/wordmark.svg";
+import Logo from "../../assets/logo/logo.svg";
+import wordMark from "../../assets/logo/wordmark.svg";
 import Content from "../utils/Content";
-import wave1 from "../../assets/wave1.png";
-import wave2 from "../../assets/wave2.png";
-import foam1 from "../../assets/foam1.png";
-import foam2 from "../../assets/foam2.png";
-import bush from "../../assets/bush.png";
+import wave1 from "../../assets/buffer/wave1.png";
+import wave2 from "../../assets/buffer/wave2.png";
+import foam1 from "../../assets/buffer/foam1.png";
+import foam2 from "../../assets/buffer/foam2.png";
+import bush from "../../assets/buffer/bush.png";
+import umbrella from "../../assets/flair/umbrella.png";
 
 const Hero = () => {
   return (
     <Content id="hero">
       <div className="beach cflex">
         <img src={bush} className="bush stg ud" style={{ "--i": 20 }} alt="" />
-        <div className="logo-mark cflex">
-          <img src={Logo} className="logo stg rl" style={{ "--i": 15 }} />
-          <div className="logo-mark-word cflex">
+        <div className="hero-cnt">
+          <div className="logo-mark cflex">
+            <img src={Logo} className="logo stg rl" style={{ "--i": 15 }} />
+            <div className="logo-mark-word cflex">
+              <img
+                src={wordMark}
+                className="wordmark stg ud"
+                style={{ "--i": 16 }}
+              />
+              <span
+                className="hero-logo-mark-indi stg du"
+                style={{ "--i": 17 }}
+              >
+                school edition 2026
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="hero-cnt">
+          {" "}
+          <div className="flair-hero">
             <img
-              src={wordMark}
-              className="wordmark stg ud"
-              style={{ "--i": 16 }}
+              src={umbrella}
+              className="hero-umb stg lr"
+              style={{ "--i": 18 }}
             />
-            <span className="hero-logo-mark-indi stg du" style={{ "--i": 17 }}>
-              school edition 2026
-            </span>
           </div>
         </div>
       </div>

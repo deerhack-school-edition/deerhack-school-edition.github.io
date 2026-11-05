@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
 
-  background-image: url("../assets/sand.png");
+  background-image: url("../assets/buffer/sand.png");
   background-size: cover;
   background-position: center;
 
@@ -14,7 +14,7 @@
   position: absolute;
   inset: 0;
 
-  background-image: url("../assets/shadow1.png");
+  background-image: url("../assets/buffer/shadow1.png");
   background-size: cover;
   background-position: center;
 
@@ -24,12 +24,26 @@
 
 .beach,
 .waves {
- position: relative;
+  position: relative;
   height: 50%;
   width: 100%;
 }
+.hero-cnt{
+  height:100%;
+  width:50%;
+  padding: 0 5dvw;
+  position: relative;
+ z-index:1;
+}
 
-.bush{
+.hero-umb{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+.bush {
   width: 100%;
   height: auto;
   position: absolute;
@@ -39,12 +53,13 @@
 .logo-mark {
   position: absolute;
   gap: 10px;
-  bottom:0;
+  bottom: 0;
 }
 
 .logo {
   height: 100px;
   width: 100px;
+
 }
 
 .logo-mark-word {
@@ -76,17 +91,12 @@
   bottom: 0;
 }
 
-
-
-
 @media (max-width: 768px) {
   #hero {
     flex-direction: column;
     justify-content: center;
   }
-
 }
 
 @media (max-width: 480px) {
-
 }

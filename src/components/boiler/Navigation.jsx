@@ -1,5 +1,5 @@
-import logo from "../../assets/favicon.svg";
-import wordmark from "../../assets/wordmark-straight.svg";
+import logo from "../../assets/logo/favicon.svg";
+import wordmark from "../../assets/logo/wordmark-straight.svg";
 import { useEffect, useRef, useState } from "react";
 
 const Navigation = () => {

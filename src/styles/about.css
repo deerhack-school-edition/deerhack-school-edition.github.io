@@ -1,4 +1,4 @@
-#about{
+#about {
   background-color: var(--surface-light);
 
   position: relative;
@@ -7,13 +7,12 @@
   flex-direction: column;
 }
 
-
 #about::after {
   content: "";
   position: absolute;
   inset: 0;
 
-  background-image: url("../assets/shadow2.png");
+  background-image: url("../assets/buffer/shadow2.png");
   background-size: cover;
   background-position: center;
 
@@ -21,9 +20,9 @@
   pointer-events: none;
 }
 
-.wave2dep{
-    width:100%;
-    height:auto;
-    position: absolute;
-    top:0;
+.wave2dep {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
 }
