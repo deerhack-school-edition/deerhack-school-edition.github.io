@@ -28,20 +28,46 @@
   height: 50%;
   width: 100%;
 }
-.hero-cnt{
-  height:100%;
-  width:50%;
+.hero-cnt {
+  height: 100%;
+  width: 50%;
   padding: 0 5dvw;
   position: relative;
- z-index:1;
+  z-index: 1;
 }
 
-.hero-umb{
+.hero-umb {
+  position: absolute;
+  bottom: 25%;
+  right: 10dvw;
+}
+
+.hero-crab {
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
+.hero-stone {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+}
+
+.hero-stone-img1 {
+  transform: scale(1.5);
+}
+.hero-stone-img2 {
+  transform: scale(2) rotate(45deg);
+}
+
+.hero-umb-img {
+  transform: scale(1.5);
+}
+
+.hero-crab-img {
+  transform: rotate(45deg) scale(0.75);
+}
 
 .bush {
   width: 100%;
@@ -53,34 +79,61 @@
 .logo-mark {
   position: absolute;
   gap: 10px;
+  transform: scale(1.25);
+  left: 5dvw;
   bottom: 25%;
 }
 
 .logo {
-width: 115.2px;
-height: 115.2px;
+  width: 115.2px;
+  height: 115.2px;
 
-padding:5% 0 0 0;
+  padding: 5% 0 0 0;
 
-background: radial-gradient(3.79% 5.43% at 7.81% 41.75%, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0) 87.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(7.55% 11.33% at 14.32% 25.69%, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0) 87.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(14.56% 10.01% at 27.34% 10.5%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(31.53% 21.97% at 35.59% 6.16%, #FFFFFF 0%, rgba(255, 255, 255, 0.927885) 15.38%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #90E0EF -0.35%, #023E8A 52.9%, #34A0A4 100.35%);
-background-blend-mode: normal, normal, normal, soft-light, normal;
-box-shadow: -4px 6px 6.8px rgba(0, 0, 0, 0.4), inset -5px -4px 16px rgba(0, 0, 0, 0.41);
-border-radius: 97.2px;
-transform: matrix(-1, 0, 0, 1, 0, 0);
+  background:
+    radial-gradient(
+        3.79% 5.43% at 7.81% 41.75%,
+        rgba(255, 255, 255, 0.64) 0%,
+        rgba(255, 255, 255, 0) 87.02%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        7.55% 11.33% at 14.32% 25.69%,
+        rgba(255, 255, 255, 0.64) 0%,
+        rgba(255, 255, 255, 0) 87.02%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        14.56% 10.01% at 27.34% 10.5%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        31.53% 21.97% at 35.59% 6.16%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.927885) 15.38%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(180deg, #90e0ef -0.35%, #023e8a 52.9%, #34a0a4 100.35%);
+  background-blend-mode: normal, normal, normal, soft-light, normal;
+  box-shadow:
+    -4px 6px 6.8px rgba(0, 0, 0, 0.4),
+    inset -5px -4px 16px rgba(0, 0, 0, 0.41);
+  border-radius: 97.2px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .logo-mark-word {
   flex-direction: column;
   align-items: start;
   height: 100%;
-
 }
 
 .word-mark {
@@ -107,42 +160,38 @@ flex-grow: 0;
   bottom: 0;
 }
 
-#foam1{
-  height:50dvh;
+#foam1 {
+  height: 50dvh;
 }
-#wave1{
-  height:37.5dvh;
+#wave1 {
+  height: 37.5dvh;
 }
-#foam2{
-  height:25dvh;
+#foam2 {
+  height: 25dvh;
 }
 
 @media (max-width: 1300px) {
   .bush {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0px;
-}
-
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+  }
 }
 
 @media (max-width: 900px) {
-  #foam1{
-width:auto;
+  #foam1 {
+    width: auto;
+  }
+  #wave1 {
+    width: auto;
+  }
+  #foam2 {
+    width: auto;
+  }
 }
-#wave1{
-width:auto;
-}
-#foam2{
-width:auto;
-}
-}
-
 
 @media (max-width: 768px) {
-
-
 }
 
 @media (max-width: 480px) {

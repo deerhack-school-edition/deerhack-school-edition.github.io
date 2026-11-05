@@ -7,6 +7,9 @@ import foam1 from "../../assets/buffer/foam1.png";
 import foam2 from "../../assets/buffer/foam2.png";
 import bush from "../../assets/buffer/bush.png";
 import umbrella from "../../assets/flair/umbrella.png";
+import crab from "../../assets/flair/crab.png";
+import SEtrans from "../utils/SEtrans";
+import stone from "../../assets/flair/stone.png";
 
 const Hero = () => {
   return (
@@ -32,13 +35,17 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-cnt">
-          {" "}
           <div className="flair-hero">
-            <img
-              src={umbrella}
-              className="hero-umb stg lr"
-              style={{ "--i": 18 }}
-            />
+            <SEtrans className="hero-umb lr" i={18}>
+              <img src={umbrella} className="hero-umb-img" />
+            </SEtrans>
+            <SEtrans className="hero-crab lr" i={19}>
+              <img src={crab} className="hero-crab-img" />
+            </SEtrans>
+            <SEtrans className="hero-stone lr" i={18}>
+              <img src={stone} className="hero-stone-img1" />
+              <img src={stone} className="hero-stone-img2" />
+            </SEtrans>
           </div>
         </div>
       </div>
