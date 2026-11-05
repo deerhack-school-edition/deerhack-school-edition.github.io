@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo/logo.svg";
+import Logo from "../../assets/logo/favicon.svg";
 import wordMark from "../../assets/logo/wordmark.svg";
 import Content from "../utils/Content";
 import wave1 from "../../assets/buffer/wave1.png";
