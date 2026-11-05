@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hero-cnt">
+        <div className="hero-cnt" id="hero-flair">
           <div className="flair-hero">
             <SEtrans className="hero-umb lr" i={18}>
               <img src={umbrella} className="hero-umb-img" />

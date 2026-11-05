@@ -180,6 +180,11 @@
 }
 
 @media (max-width: 900px) {
+ 
+  #hero-flair {
+   display: none;
+  }
+
   #foam1 {
     width: auto;
   }
