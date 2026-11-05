@@ -15,10 +15,21 @@ const Hero = () => {
   return (
     <Content id="hero">
       <div className="beach cflex">
-        <img src={bush} className="bush stg ud" style={{ "--i": 20 }} alt="" />
+        <img
+          fetchPriority="high"
+          src={bush}
+          className="bush stg ud"
+          style={{ "--i": 20 }}
+          alt=""
+        />
         <div className="hero-cnt">
           <div className="logo-mark cflex">
-            <img src={Logo} className="logo stg rl" style={{ "--i": 15 }} />
+            <img
+              fetchPriority="high"
+              src={Logo}
+              className="logo stg rl"
+              style={{ "--i": 15 }}
+            />
             <div className="logo-mark-word cflex">
               <img
                 src={wordMark}
@@ -37,14 +48,26 @@ const Hero = () => {
         <div className="hero-cnt" id="hero-flair">
           <div className="flair-hero">
             <SEtrans className="hero-umb lr" i={18}>
-              <img src={umbrella} className="hero-umb-img" />
+              <img
+                fetchPriority="high"
+                src={umbrella}
+                className="hero-umb-img"
+              />
             </SEtrans>
             <SEtrans className="hero-crab lr" i={19}>
-              <img src={crab} className="hero-crab-img" />
+              <img fetchPriority="high" src={crab} className="hero-crab-img" />
             </SEtrans>
             <SEtrans className="hero-stone lr" i={18}>
-              <img src={stone} className="hero-stone-img1" />
-              <img src={stone} className="hero-stone-img2" />
+              <img
+                fetchPriority="high"
+                src={stone}
+                className="hero-stone-img1"
+              />
+              <img
+                fetchPriority="high"
+                src={stone}
+                className="hero-stone-img2"
+              />
             </SEtrans>
           </div>
         </div>
