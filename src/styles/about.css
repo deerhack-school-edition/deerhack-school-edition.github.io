@@ -4,7 +4,7 @@
   position: relative;
   isolation: isolate;
 
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 #about::after {
@@ -25,4 +25,172 @@
   height: auto;
   position: absolute;
   top: 0;
+}
+
+.about-cnt {
+  width: 50%;
+  height: 100%;
+  padding: 0 5dvw;
+}
+
+#abt-cnt-1 {
+  flex-direction: column;
+}
+
+.about-h1 {
+  /* width: 50%; */
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.about-p {
+  width: 50%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#abt-cnt-2 {
+  position: relative;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
+}
+
+.visual-board {
+  /* position: relative;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  height: 100%;
+  width: 100%; */
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  position: relative;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.vb-img {
+
+  background: #b5e48c;
+  transform: rotate(7deg);
+  height: 100%;
+  width: 100%;
+}
+
+.star-pos {
+  position: absolute;
+  height: 5dvw;
+}
+
+.sc1,
+.sc2,
+.sc3 {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.sc4,
+.sc5,
+.sc6 {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  position: relative;
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+.star-1,
+.star-2,
+.star-3 {
+  bottom: 0;
+}
+.star-2 {
+  left: 100%;
+}
+.star-3 {
+  height: 10dvh;
+  bottom: -10dvh;
+}
+
+.star-4,
+.star-5,
+.star-6 {
+  top: 0;
+}
+.star-5 {
+  right: 100%;
+}
+.star-6 {
+  height: 10dvh;
+  top: -10dvh;
+}
+
+/*rotation*/
+.star-1 {
+  height: 7dvh;
+  transform: rotate(-18deg);
+}
+
+.star-2 {
+  height: 9dvh;
+  transform: rotate(32deg);
+}
+
+.star-3 {
+  height: 10dvh;
+  transform: rotate(-45deg);
+}
+
+.star-4 {
+  height: 8dvh;
+  transform: rotate(25deg);
+}
+
+.star-5 {
+  height: 11dvh;
+  transform: rotate(-30deg);
+}
+
+.star-6 {
+  height: 6dvh;
+  transform: rotate(48deg);
+}
+
+@media (max-width: 900px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .about-cnt {
+    width: 100%;
+    padding: 2dvw;
+  }
+
+  .about-h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-p {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+  #abt-cnt-2 {
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
 }

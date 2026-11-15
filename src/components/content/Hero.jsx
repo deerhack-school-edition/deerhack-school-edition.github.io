@@ -8,7 +8,7 @@ import foam2 from "../../assets/buffer/foam2.png";
 import bush from "../../assets/buffer/bush.png";
 import umbrella from "../../assets/flair/umbrella.png";
 import crab from "../../assets/flair/crab.png";
-import SEtrans from "../utils/SEtrans";
+import SET from "../utils/SEtrans";
 import stone from "../../assets/flair/stone.png";
 
 const Hero = () => {
@@ -47,17 +47,17 @@ const Hero = () => {
         </div>
         <div className="hero-cnt" id="hero-flair">
           <div className="flair-hero">
-            <SEtrans className="hero-umb lr" i={18}>
+            <SET className="hero-umb lr" i={18}>
               <img
                 fetchPriority="high"
                 src={umbrella}
                 className="hero-umb-img"
               />
-            </SEtrans>
-            <SEtrans className="hero-crab lr" i={19}>
+            </SET>
+            <SET className="hero-crab lr" i={19}>
               <img fetchPriority="high" src={crab} className="hero-crab-img" />
-            </SEtrans>
-            <SEtrans className="hero-stone lr" i={18}>
+            </SET>
+            <SET className="hero-stone lr" i={18}>
               <img
                 fetchPriority="high"
                 src={stone}
@@ -68,7 +68,7 @@ const Hero = () => {
                 src={stone}
                 className="hero-stone-img2"
               />
-            </SEtrans>
+            </SET>
           </div>
         </div>
       </div>

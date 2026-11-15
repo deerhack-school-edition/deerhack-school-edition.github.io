@@ -184,6 +184,11 @@
     display: none;
   }
 
+  .bush {
+    max-height: 50%;
+    width: auto;
+  }
+
   #foam1 {
     width: auto;
   }
@@ -195,7 +200,15 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 550px) {
+  .hero-cnt {
+    width: 100%;
+    padding: 0 2dvw;
+  }
+
+  .logo-mark {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {

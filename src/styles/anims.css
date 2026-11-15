@@ -71,7 +71,7 @@
 }
 
 /* Blur In */
-@keyframes blur-in {
+@keyframes bi {
   from {
     opacity: 0;
   }
@@ -80,12 +80,12 @@
   }
 }
 
-.blur-in {
-  animation: blur-in 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+.bi {
+  animation: bi 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 /* Blur Out */
-@keyframes blur-out {
+@keyframes bo {
   from {
     opacity: 1;
   }
@@ -94,6 +94,6 @@
   }
 }
 
-.blur-out {
-  animation: blur-out 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+.bo {
+  animation: bo 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }

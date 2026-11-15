@@ -1,11 +1,11 @@
 import React from "react";
 
-const SEtrans = ({ className, children, i }) => {
+const SET = ({ className, children, i }) => {
   return (
-    <div className={`stg ${className}`} style={{ "--i": i }}>
+    <div className={`stg fc ${className}`} style={{ "--i": i }}>
       {children}
     </div>
   );
 };
 
-export default SEtrans;
+export default SET;
