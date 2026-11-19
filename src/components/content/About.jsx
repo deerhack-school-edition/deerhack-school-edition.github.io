@@ -34,13 +34,13 @@ const About = () => {
           <div className="vb-img"></div>
         </SET>
         {/**/}
-        <SET className="scroll stg sc4 du" i={6}>
+        <SET className="scroll stg sc4 du" i={3}>
           <img src={star} className="star-pos star-4" />
         </SET>
-        <SET className="scroll stg sc5 rl" i={7}>
+        <SET className="scroll stg sc5 rl" i={4}>
           <img src={star} className="star-pos star-5" />
         </SET>
-        <SET className="scroll stg sc6 lr" i={8}>
+        <SET className="scroll stg sc6 lr" i={5}>
           <img src={star} className="star-pos star-6" />
         </SET>
       </div>
