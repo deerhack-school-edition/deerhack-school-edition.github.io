@@ -212,4 +212,7 @@
 }
 
 @media (max-width: 480px) {
+  .logo-mark {
+    transform: scale(0.95);
+  }
 }

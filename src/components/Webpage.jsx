@@ -3,6 +3,8 @@ import Hero from "./content/Hero.jsx";
 import Navigation from "./boiler/Navigation.jsx";
 import Scroll from "./utils/Scroll.jsx";
 import About from "./content/About.jsx";
+import Audience from "./content/Audience.jsx";
+import Sponsors from "./content/Sponsors.jsx";
 const Webpage = () => {
   return (
     <>
@@ -10,6 +12,8 @@ const Webpage = () => {
         <Navigation />
         <Hero />
         <About />
+        <Audience />
+        <Sponsors />
       </Scroll>
     </>
   );
