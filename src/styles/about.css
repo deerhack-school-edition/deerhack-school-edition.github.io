@@ -172,6 +172,7 @@
 @media (max-width: 900px) {
   #about {
     flex-direction: column;
+    overflow-y: hidden ;
   }
 
   .about-cnt {
