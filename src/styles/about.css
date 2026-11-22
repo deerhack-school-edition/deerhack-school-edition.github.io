@@ -12,7 +12,7 @@
   position: absolute;
   inset: 0;
 
-  background-image: url("../assets/buffer/shadow2.png");
+  background-image: url("../assets/buffer/shadow2.webp");
   background-size: cover;
   background-position: center;
 
@@ -172,7 +172,7 @@
 @media (max-width: 900px) {
   #about {
     flex-direction: column;
-    overflow-y: hidden ;
+    overflow-y: hidden;
   }
 
   .about-cnt {

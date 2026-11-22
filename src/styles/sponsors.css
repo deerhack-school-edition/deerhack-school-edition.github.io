@@ -1,10 +1,10 @@
 #sponsors {
-    position: relative;
-  background: url("../assets/buffer/sponsor-fade.png"), url("../assets/buffer/whale.png");
+  position: relative;
+  background:
+    url("../assets/buffer/sponsor-fade.webp"), url("../assets/buffer/whale.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   flex-direction: column;
 }
-

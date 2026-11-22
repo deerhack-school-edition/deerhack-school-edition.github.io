@@ -1,7 +1,7 @@
 import React from "react";
-import Wave2Dep from "../../assets/buffer/wave2dep.png";
+import Wave2Dep from "../../assets/buffer/wave2dep.webp";
 import SET from "../utils/SEtrans";
-import star from "../../assets/flair/starfish.png";
+import star from "../../assets/flair/starfish.webp";
 
 const About = () => {
   return (

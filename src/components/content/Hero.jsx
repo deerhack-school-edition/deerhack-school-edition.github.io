@@ -1,15 +1,15 @@
 import Logo from "../../assets/logo/favicon.svg";
 import wordMark from "../../assets/logo/wordmark.svg";
 import Content from "../utils/Content";
-import wave1 from "../../assets/buffer/wave1.png";
-import wave2 from "../../assets/buffer/wave2.png";
-import foam1 from "../../assets/buffer/foam1.png";
-import foam2 from "../../assets/buffer/foam2.png";
-import bush from "../../assets/buffer/bush.png";
-import umbrella from "../../assets/flair/umbrella.png";
-import crab from "../../assets/flair/crab.png";
+import wave1 from "../../assets/buffer/wave1.webp";
+import wave2 from "../../assets/buffer/wave2.webp";
+import foam1 from "../../assets/buffer/foam1.webp";
+import foam2 from "../../assets/buffer/foam2.webp";
+import bush from "../../assets/buffer/bush.webp";
+import umbrella from "../../assets/flair/umbrella.webp";
+import crab from "../../assets/flair/crab.webp";
 import SET from "../utils/SEtrans";
-import stone from "../../assets/flair/stone.png";
+import stone from "../../assets/flair/stone.webp";
 
 const Hero = () => {
   return (

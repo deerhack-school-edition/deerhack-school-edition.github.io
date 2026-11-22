@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
   background: var(--surface-dark);
-  background-image: url("../assets/buffer/coral-bg.png");
+  background-image: url("../assets/buffer/coral-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
   height: 100%;
   width: auto;
 
-  background-image: url("../assets/buffer/coral-wall-left.png");
+  background-image: url("../assets/buffer/coral-wall-left.webp");
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
   height: 100%;
   width: auto;
 
-  background-image: url("../assets/buffer/coral-wall-right.png");
+  background-image: url("../assets/buffer/coral-wall-right.webp");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
