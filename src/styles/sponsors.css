@@ -15,8 +15,7 @@
   contain-intrinsic-size: auto 100dvh;
 }
 
-
-/* Animated Whale Background: 20% opacity */
+/* Animated Whale Background */
 .sponsors-whale-bg {
   position: absolute;
   top: 0;
@@ -26,7 +25,6 @@
   display: block;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.2;
   overflow: hidden;
 }
 
