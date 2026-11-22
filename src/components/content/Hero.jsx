@@ -21,6 +21,8 @@ const Hero = () => {
           className="bush stg ud"
           style={{ "--i": 20 }}
           alt=""
+          width={1920}
+          height={200}
         />
         <div className="hero-cnt">
           <div className="logo-mark cflex">
@@ -29,12 +31,18 @@ const Hero = () => {
               src={Logo}
               className="logo stg rl"
               style={{ "--i": 15 }}
+              alt="DeerHack Logo"
+              width={115}
+              height={115}
             />
             <div className="logo-mark-word cflex">
               <img
                 src={wordMark}
                 className="wordmark stg ud"
                 style={{ "--i": 16 }}
+                alt="DeerHack"
+                width={200}
+                height={40}
               />
               <span
                 className="hero-logo-mark-indi stg du"
@@ -52,21 +60,37 @@ const Hero = () => {
                 fetchPriority="high"
                 src={umbrella}
                 className="hero-umb-img"
+                alt=""
+                width={80}
+                height={80}
               />
             </SET>
             <SET className="hero-crab lr" i={19}>
-              <img fetchPriority="high" src={crab} className="hero-crab-img" />
+              <img
+                fetchPriority="high"
+                src={crab}
+                className="hero-crab-img"
+                alt=""
+                width={60}
+                height={60}
+              />
             </SET>
             <SET className="hero-stone lr" i={18}>
               <img
                 fetchPriority="high"
                 src={stone}
                 className="hero-stone-img1"
+                alt=""
+                width={30}
+                height={30}
               />
               <img
                 fetchPriority="high"
                 src={stone}
                 className="hero-stone-img2"
+                alt=""
+                width={30}
+                height={30}
               />
             </SET>
           </div>
@@ -79,6 +103,8 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 21 }}
           alt=""
+          width={1920}
+          height={500}
         />
         <img
           src={wave1}
@@ -86,6 +112,8 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 20 }}
           alt=""
+          width={1920}
+          height={375}
         />
         <img
           src={foam2}
@@ -93,6 +121,8 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 19 }}
           alt=""
+          width={1920}
+          height={250}
         />
         <img
           src={wave2}
@@ -100,6 +130,8 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 18 }}
           alt=""
+          width={1920}
+          height={200}
         />
       </div>
     </Content>

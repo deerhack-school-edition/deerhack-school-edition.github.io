@@ -11,4 +11,10 @@
   transition:
     transform 1s ease-in-out,
     top 0.3s var(--transition);
+  will-change: transform, opacity;
+}
+
+/* Use GPU compositing for wave/foam images to avoid repaints */
+.wave {
+  will-change: transform;
 }

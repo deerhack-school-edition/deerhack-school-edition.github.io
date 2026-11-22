@@ -9,6 +9,10 @@
 
   flex-direction: column;
   gap: 1rem;
+
+  /* Allow browser to skip rendering until scrolled into view */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100dvh;
 }
 
 #audience::before {

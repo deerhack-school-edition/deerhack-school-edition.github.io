@@ -7,4 +7,8 @@
   background-repeat: no-repeat;
 
   flex-direction: column;
+
+  /* Allow browser to skip rendering until scrolled into view */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100dvh;
 }

@@ -14,6 +14,8 @@ const Scroll = ({ children }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("play");
+            // Unobserve after triggering — saves CPU on every scroll
+            observer.unobserve(entry.target);
           }
         });
       },

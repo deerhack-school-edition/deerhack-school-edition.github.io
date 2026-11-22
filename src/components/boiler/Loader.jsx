@@ -16,7 +16,7 @@ export const Loader = () => {
     fill: 1100,
     transform: 1600,
     fade: 2000,
-    finish: 5000,
+    finish: 3000, // Reduced from 5000ms → 3000ms so content appears faster
   };
 
   const svg = useRef(null);
