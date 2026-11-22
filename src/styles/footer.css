@@ -1,0 +1,348 @@
+/* Footer Styles with Longer Height, Texture, Left Copyright & Bottom Trim */
+
+.footer-container {
+  position: relative;
+  width: 100%;
+  min-height: 82vh;
+  background-color: #061c61;
+  /* User-provided deep navy paper/grunge texture */
+  background-image: url("../assets/flair/footer-texture.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  padding: 6rem clamp(1.5rem, 5vw, 4.5rem) 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid rgba(70, 150, 210, 0.25);
+}
+
+/* Subtle ambient background glow for depth */
+.footer-ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(70, 150, 210, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 88% 75%, rgba(18, 41, 90, 0.2) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+}
+
+/* Left Group: Brand Column + Pages Column aligned together on the left */
+.footer-left-group {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  flex: 1;
+}
+
+/* Left Column: Brand & Info (shifted further left) */
+.footer-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 440px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.footer-deer-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s var(--transition);
+}
+
+.footer-deer-logo:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-wordmark-img {
+  width: 138px;
+  height: 69px;
+  object-fit: contain;
+}
+
+.footer-edition-text {
+  font-family: var(--header);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.2rem;
+  text-transform: lowercase;
+}
+
+.footer-desc {
+  font-family: var(--support);
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Clean Black and White Instagram Button */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.footer-insta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-insta-svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Default state: crisp white camera outline on black bubble */
+.footer-insta-rect,
+.footer-insta-circle {
+  stroke: #ffffff !important;
+  stroke-width: 2px;
+  fill: none !important;
+  transition: stroke 0.2s ease;
+}
+
+.footer-insta-dot {
+  fill: #ffffff !important;
+  stroke: none !important;
+  transition: fill 0.2s ease;
+}
+
+/* Hover state: Pure color inversion - white bubble, pitch-black camera outline */
+.footer-insta-btn:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.55);
+}
+
+.footer-insta-btn:hover .footer-insta-rect,
+.footer-insta-btn:hover .footer-insta-circle {
+  stroke: #000000 !important;
+}
+
+.footer-insta-btn:hover .footer-insta-dot {
+  fill: #000000 !important;
+  stroke: none !important;
+}
+
+/* Copyright - placed underneath insta logo, above the line, towards the left */
+.footer-copyright {
+  font-family: var(--support);
+  font-size: 0.825rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0.5rem 0 0;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+/* Pages Navigation Column - Aligned on the left side beside the brand */
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  gap: 1.25rem;
+  min-width: 130px;
+}
+
+.footer-nav-heading {
+  font-family: var(--header);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.footer-nav-item {
+  font-family: var(--support);
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.25s var(--transition), transform 0.25s var(--transition);
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.footer-nav-item:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+/* Mascot on the far right */
+.footer-mascot-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.footer-mascot-img {
+  width: 133px;
+  height: 238px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+  transition: transform 0.3s var(--transition);
+}
+
+.footer-mascot-img:hover {
+  transform: translateY(-6px);
+}
+
+/* Divider Line across footer before the bottom trim */
+.footer-divider-line {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1360px;
+  margin: 4.5rem auto 1.5rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Decorative Starry Foam Trim at the bottom after the line */
+.footer-bottom-trim-wrap {
+  position: relative;
+  z-index: 1;
+  width: calc(100% + 2 * clamp(1.5rem, 5vw, 4.5rem));
+  margin: 0 calc(-1 * clamp(1.5rem, 5vw, 4.5rem));
+  overflow: hidden;
+  line-height: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-bottom-trim-img {
+  width: 100%;
+  height: clamp(58px, 7.65vw, 108px);
+  object-fit: cover;
+  object-position: bottom center;
+  display: block;
+  pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .footer-container {
+    min-height: auto;
+    padding-top: 4.5rem;
+  }
+
+  .footer-left-group {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer-divider-line {
+    margin: 3.5rem auto 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 3.5rem 1.5rem 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .footer-mascot-col {
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .footer-bottom-trim-wrap {
+    width: calc(100% + 3rem);
+    margin: 0 -1.5rem;
+  }
+
+  .footer-bottom-trim-img {
+    height: clamp(45px, 10.8vw, 76px);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-brand-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-deer-logo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .footer-wordmark-img {
+    width: 120px;
+    height: 60px;
+  }
+}

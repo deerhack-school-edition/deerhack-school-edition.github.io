@@ -5,6 +5,7 @@ import Scroll from "./utils/Scroll.jsx";
 import About from "./content/About.jsx";
 import Audience from "./content/Audience.jsx";
 import Sponsors from "./content/Sponsors.jsx";
+import Footer from "./boiler/Footer.jsx";
 const Webpage = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const Webpage = () => {
         <About />
         <Audience />
         <Sponsors />
+        <Footer />
       </Scroll>
     </>
   );

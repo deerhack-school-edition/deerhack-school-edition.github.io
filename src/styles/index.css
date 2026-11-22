@@ -23,6 +23,10 @@ h6 {
   color: var(--white);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   background-color: var(--background);
