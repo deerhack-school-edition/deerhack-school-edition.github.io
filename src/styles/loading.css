@@ -3,13 +3,18 @@
   z-index: 9999;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   background-color: var(--background);
   transition: opacity 1s var(--transition);
 }
 
 .loader-logo {
   opacity: 0;
-  transition: transform 1s var(--transition);
+  transition:
+    opacity 0.3s ease,
+    transform 1s var(--transition);
 }
 
 .loader-path {

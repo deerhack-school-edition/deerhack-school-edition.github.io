@@ -137,6 +137,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#schedule"
+                  className="footer-nav-item"
+                  onClick={(e) => handleScrollTo(e, "schedule")}
+                >
+                  Schedule
+                </a>
+              </li>
+              <li>
+                <a
                   href="#sponsors"
                   className="footer-nav-item"
                   onClick={(e) => handleScrollTo(e, "sponsors")}

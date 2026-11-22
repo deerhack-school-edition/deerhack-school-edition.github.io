@@ -13,7 +13,7 @@ const App = () => {
           path="/"
           element={
             <>
-              {/* <Loader /> */}
+              <Loader />
               <Suspense fallback={null}>
                 <Webpage />
               </Suspense>

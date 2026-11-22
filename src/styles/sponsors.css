@@ -1,7 +1,8 @@
 #sponsors {
   position: relative;
-
-  background:
+  isolation: isolate;
+  background-color: var(--background);
+  background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../assets/buffer/sponsor-fade.webp");
   background-size: cover;
@@ -12,6 +13,18 @@
 
   content-visibility: auto;
   contain-intrinsic-size: auto 100dvh;
+}
+
+#sponsors::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/buffer/sponsor-fade.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Animated Whale Background */
@@ -40,12 +53,12 @@
 #sponsors p,
 #sponsors br {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.whale{
+.whale {
   position: absolute;
-  background:     url("../assets/buffer/whale.webp");
+  background: url("../assets/buffer/whale.webp");
   background-size: cover;
   opacity: 0;
   background-position: center;
@@ -53,4 +66,3 @@
   height: 100%;
   width: 100%;
 }
-
