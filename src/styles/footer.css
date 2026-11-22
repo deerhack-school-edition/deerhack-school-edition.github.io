@@ -28,8 +28,16 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 12% 20%, rgba(70, 150, 210, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 88% 75%, rgba(18, 41, 90, 0.2) 0%, transparent 55%);
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(70, 150, 210, 0.08) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 88% 75%,
+      rgba(18, 41, 90, 0.2) 0%,
+      transparent 55%
+    );
   pointer-events: none;
   z-index: 0;
 }
@@ -222,7 +230,9 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  transition: color 0.25s var(--transition), transform 0.25s var(--transition);
+  transition:
+    color 0.25s var(--transition),
+    transform 0.25s var(--transition);
   display: inline-block;
   width: fit-content;
   cursor: pointer;
@@ -321,7 +331,6 @@
     width: calc(100% + 3rem);
     margin: 0 -1.5rem;
   }
-
 }
 
 @media (max-width: 480px) {

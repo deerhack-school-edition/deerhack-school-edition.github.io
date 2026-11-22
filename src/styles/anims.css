@@ -97,3 +97,21 @@
 .bo {
   animation: bo 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
+
+
+/*custom animss*/
+
+@keyframes dive{
+  from {
+    opacity: 0;
+    transform: translateX(100%) rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.dive {
+  animation: dive 3s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}

@@ -1,16 +1,20 @@
 #sponsors {
   position: relative;
+
   background: url("../assets/buffer/sponsor-fade.webp");
+  background:
+    rgba(0,0,0,0.2),
+    url("../assets/buffer/sponsor-fade.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   flex-direction: column;
   overflow: hidden;
 
-  /* Allow browser to skip rendering until scrolled into view */
   content-visibility: auto;
   contain-intrinsic-size: auto 100dvh;
 }
+
 
 /* Animated Whale Background: 20% opacity */
 .sponsors-whale-bg {
@@ -41,3 +45,15 @@
   position: relative;
   z-index: 1;
 }
+
+.whale{
+  position: absolute;
+  background:     url("../assets/buffer/whale.webp");
+  background-size: cover;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
