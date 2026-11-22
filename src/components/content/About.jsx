@@ -12,8 +12,8 @@ const About = () => {
         loading="lazy"
         decoding="async"
         alt=""
-        width={1920}
-        height={200}
+        width={1440}
+        height={327}
       />
       <div className="about-cnt cflex" id="abt-cnt-1">
         <h1 className="scroll stg ud about-h1" style={{ "--i": 1 }}>
@@ -34,9 +34,7 @@ const About = () => {
             className="star-pos star-1"
             loading="lazy"
             decoding="async"
-            alt=""
-            width={50}
-            height={50}
+            alt="Starfish"
           />
         </SET>
         <SET className="scroll stg sc2 ud" i={4}>
@@ -45,9 +43,7 @@ const About = () => {
             className="star-pos star-2"
             loading="lazy"
             decoding="async"
-            alt=""
-            width={50}
-            height={50}
+            alt="Starfish"
           />
         </SET>
         <SET className="scroll stg sc3 lr" i={5}>
@@ -56,9 +52,7 @@ const About = () => {
             className="star-pos star-3"
             loading="lazy"
             decoding="async"
-            alt=""
-            width={50}
-            height={50}
+            alt="Starfish"
           />
         </SET>
         {/**/}
@@ -72,9 +66,7 @@ const About = () => {
             className="star-pos star-4"
             loading="lazy"
             decoding="async"
-            alt=""
-            width={50}
-            height={50}
+            alt="Starfish"
           />
         </SET>
         <SET className="scroll stg sc5 rl" i={4}>
@@ -83,9 +75,7 @@ const About = () => {
             className="star-pos star-5"
             loading="lazy"
             decoding="async"
-            alt=""
-            width={50}
-            height={50}
+            alt="Starfish"
           />
         </SET>
         <SET className="scroll stg sc6 lr" i={5}>
@@ -94,9 +84,7 @@ const About = () => {
             className="star-pos star-6"
             loading="lazy"
             decoding="async"
-            alt=""
-            width={50}
-            height={50}
+            alt="Starfish"
           />
         </SET>
       </div>

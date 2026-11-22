@@ -21,8 +21,8 @@ const Hero = () => {
           className="bush stg ud"
           style={{ "--i": 20 }}
           alt=""
-          width={1920}
-          height={200}
+          width={1440}
+          height={238}
         />
         <div className="hero-cnt">
           <div className="logo-mark cflex">
@@ -41,8 +41,6 @@ const Hero = () => {
                 className="wordmark stg ud"
                 style={{ "--i": 16 }}
                 alt="DeerHack"
-                width={200}
-                height={40}
               />
               <span
                 className="hero-logo-mark-indi stg du"
@@ -61,8 +59,6 @@ const Hero = () => {
                 src={umbrella}
                 className="hero-umb-img"
                 alt=""
-                width={80}
-                height={80}
               />
             </SET>
             <SET className="hero-crab lr" i={19}>
@@ -71,8 +67,6 @@ const Hero = () => {
                 src={crab}
                 className="hero-crab-img"
                 alt=""
-                width={60}
-                height={60}
               />
             </SET>
             <SET className="hero-stone lr" i={18}>
@@ -81,16 +75,12 @@ const Hero = () => {
                 src={stone}
                 className="hero-stone-img1"
                 alt=""
-                width={30}
-                height={30}
               />
               <img
                 fetchPriority="high"
                 src={stone}
                 className="hero-stone-img2"
                 alt=""
-                width={30}
-                height={30}
               />
             </SET>
           </div>
@@ -103,8 +93,6 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 21 }}
           alt=""
-          width={1920}
-          height={500}
         />
         <img
           src={wave1}
@@ -112,8 +100,6 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 20 }}
           alt=""
-          width={1920}
-          height={375}
         />
         <img
           src={foam2}
@@ -121,8 +107,6 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 19 }}
           alt=""
-          width={1920}
-          height={250}
         />
         <img
           src={wave2}
@@ -130,8 +114,6 @@ const Hero = () => {
           className="wave stg du"
           style={{ "--i": 18 }}
           alt=""
-          width={1920}
-          height={200}
         />
       </div>
     </Content>

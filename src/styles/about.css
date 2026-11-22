@@ -88,6 +88,9 @@
 .star-pos {
   position: absolute;
   height: 5dvw;
+  width: auto;
+  aspect-ratio: 258 / 268;
+  object-fit: contain;
 }
 
 .sc1,
