@@ -279,9 +279,7 @@
 
 .footer-bottom-trim-img {
   width: 100%;
-  height: clamp(58px, 7.65vw, 108px);
-  object-fit: cover;
-  object-position: bottom center;
+  height: auto;
   display: block;
   pointer-events: none;
 }
@@ -324,9 +322,6 @@
     margin: 0 -1.5rem;
   }
 
-  .footer-bottom-trim-img {
-    height: clamp(45px, 10.8vw, 76px);
-  }
 }
 
 @media (max-width: 480px) {
