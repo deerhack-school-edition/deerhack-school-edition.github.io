@@ -1,9 +1,8 @@
 #sponsors {
   position: relative;
 
-  background: url("../assets/buffer/sponsor-fade.webp");
   background:
-    rgba(0,0,0,0.2),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../assets/buffer/sponsor-fade.webp");
   background-size: cover;
   background-position: center;
