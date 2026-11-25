@@ -36,40 +36,40 @@ const Prizes = () => {
     <section className="content-section cflex" id="prize" ref={sectionRef}>
       {isInView ? (
         <div className="prizes-stage">
-          <div className="prizes-canvas">
-            <img
-              src={coralBg}
-              alt=""
-              className="prize-layer"
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-            />
-            <img
-              src={frostedOverlay}
-              alt=""
-              className="prize-layer"
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-            />
-            <img
-              src={coralWallLeft}
-              alt=""
-              className="prize-wall prize-wall-left"
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-            />
-            <img
-              src={coralWallRight}
-              alt=""
-              className="prize-wall prize-wall-right"
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-            />
+          <img
+            src={coralBg}
+            alt=""
+            className="prize-layer"
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+          />
+          <img
+            src={frostedOverlay}
+            alt=""
+            className="prize-layer"
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+          />
+          <img
+            src={coralWallLeft}
+            alt=""
+            className="prize-wall prize-wall-left"
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+          />
+          <img
+            src={coralWallRight}
+            alt=""
+            className="prize-wall prize-wall-right"
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+          />
 
+          <div className="prizes-canvas">
             <img
               src={chestImg}
               alt="Grand prize Rs. 50,000 and stickers treasure chest"

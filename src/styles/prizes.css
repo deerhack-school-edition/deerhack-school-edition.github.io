@@ -21,9 +21,11 @@
 
 .prizes-canvas {
   position: relative;
-  width: max(100%, 160dvh);
+  width: min(100vw, 155dvh);
+  max-width: 1440px;
   aspect-ratio: 16 / 10;
   flex-shrink: 0;
+  z-index: 2;
 }
 
 .prizes-placeholder {
@@ -92,7 +94,7 @@
   top: 68%;
   left: 40%;
   font-family: var(--header);
-  font-size: clamp(1.1rem, 1.8vw, 1.75rem);
+  font-size: clamp(1rem, 1.8vw, 1.75rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.01em;
@@ -170,27 +172,46 @@
   animation: prize-hover 5.2s ease-in-out -0.8s infinite;
 }
 
+@media (max-width: 1200px) {
+  .prize-wall-left {
+    left: -8%;
+  }
+  .prize-wall-right {
+    right: -8%;
+  }
+}
+
+@media (max-width: 900px) {
+  .prize-wall-left {
+    left: -18%;
+  }
+  .prize-wall-right {
+    right: -22%;
+  }
+}
+
 @media (max-width: 768px) {
-  .prize-chest {
-    width: min(62vw, 40dvh);
-  }
-
-  .prize-sticker-mascot {
-    top: 26%;
-    left: 58%;
-    width: min(20vw, 14dvh);
-  }
-
-  .prize-sticker-plane {
-    top: 38%;
-    left: 65%;
-    width: min(20vw, 14dvh);
+  .prizes-canvas {
+    width: min(200vw, 130dvh);
   }
 
   .prize-stickers-text {
-    top: 69%;
-    left: 24%;
-    font-size: clamp(1.1rem, 4.5vw, 1.5rem);
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .prize-wall-left {
+    left: -32%;
+  }
+  .prize-wall-right {
+    right: -36%;
+  }
+}
+
+@media (max-width: 450px) {
+  .prize-wall {
+    display: none;
   }
 }
 
