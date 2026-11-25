@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" fill="none"><defs><pattern id="pattern8_3750_387" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image2_3750_387" transform="scale(0.000483092 0.000414766)"/>
+</pattern>
+<pattern id="pattern9_3750_387" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3_3750_387" transform="scale(0.000483092 0.000414766)"/>
+</pattern>
+<image id="image2_3750_387" width="2070" height="2411" preserveAspectRatio="none" xlink:href="../assets/image2.png"/>
+<image id="image3_3750_387" width="2070" height="2411" preserveAspectRatio="none" xlink:href="../assets/image3.png"/>
+</defs><g opacity="0.93">
+<mask id="mask3_3750_387" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-441" y="-489" width="1223" height="1269">
+<rect x="275.828" y="779.69" width="837.414" height="975.365" transform="rotate(-148.785 275.828 779.69)" fill="url(#pattern8_3750_387)"/>
+</mask>
+<g mask="url(#mask3_3750_387)">
+<rect x="511.707" y="825.84" width="939.122" height="1185.97" transform="rotate(-168.93 511.707 825.84)" fill="#023E8A"/>
+<rect x="268.613" y="782.718" width="843.525" height="982.482" transform="rotate(-148.785 268.613 782.718)" fill="url(#pattern9_3750_387)"/>
+</g>
+</g>
+</svg>

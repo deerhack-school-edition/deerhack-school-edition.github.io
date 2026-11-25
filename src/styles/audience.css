@@ -1,6 +1,8 @@
 #audience {
   position: relative;
   isolation: isolate;
+  z-index: 3;
+  overflow-x: clip;
   background: var(--surface-dark);
   background-image: url("../assets/buffer/coral-bg.webp");
   background-size: cover;
@@ -13,6 +15,16 @@
   /* Allow browser to skip rendering until scrolled into view */
   content-visibility: auto;
   contain-intrinsic-size: auto 100dvh;
+}
+
+.audience-top-edge {
+  position: absolute;
+  top: -2dvh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
 }
 
 #audience::before {
@@ -49,7 +61,7 @@
   font-size: clamp(2.5rem, 5vw, 5rem);
   text-align: center;
   line-height: 1;
-  z-index: 2;
+  z-index: 3;
 }
 
 #audience p {
@@ -59,7 +71,7 @@
   text-align: center;
   padding: 1rem;
   border-radius: 20px;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media (max-width: 1300px) {

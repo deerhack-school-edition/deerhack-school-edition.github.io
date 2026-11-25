@@ -1,8 +1,18 @@
 import React from "react";
+import aboutPaper from "../../assets/buffer/about-paper.webp";
 
 const Audience = () => {
   return (
     <div className="content-section cflex" id="audience">
+      <img
+        src={aboutPaper}
+        className="audience-top-edge"
+        decoding="async"
+        alt=""
+        width={860}
+        height={90}
+        aria-hidden="true"
+      />
       <h1 className="scroll stg ud" style={{ "--i": 1 }}>
         Who is <br /> DeerHack for
       </h1>

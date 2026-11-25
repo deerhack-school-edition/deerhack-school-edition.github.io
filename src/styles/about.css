@@ -3,6 +3,8 @@
 
   position: relative;
   isolation: isolate;
+  z-index: 2;
+  overflow-x: clip;
 
   /* Allow browser to skip rendering until scrolled into view */
   content-visibility: auto;
@@ -17,6 +19,18 @@
   background-image: url("../assets/buffer/shadow2.webp");
   background-size: cover;
   background-position: center;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 100%
+  );
 
   z-index: 10;
   pointer-events: none;
@@ -26,7 +40,21 @@
   width: 100%;
   height: auto;
   position: absolute;
-  top: 0;
+  top: -24px;
+  left: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 24px,
+    black 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 24px,
+    black 100%
+  );
 }
 
 .about-cnt {

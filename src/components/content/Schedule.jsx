@@ -63,6 +63,7 @@ const Schedule = () => {
               src={scheduleNotes}
               alt="DeerHack Schedule"
               className="schedule-layer schedule-layer-notes"
+              draggable={false}
               loading="eager"
             />
           </div>
@@ -96,6 +97,7 @@ const Schedule = () => {
               src={schedulePeNotes}
               alt="DeerHack Schedule"
               className="schedule-pe-layer schedule-pe-layer-notes"
+              draggable={false}
               loading="eager"
             />
           </div>

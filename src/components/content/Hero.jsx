@@ -87,34 +87,18 @@ const Hero = () => {
         </div>
       </div>
       <div className="waves">
-        <img
-          src={foam1}
-          id="foam1"
-          className="wave stg du"
-          style={{ "--i": 21 }}
-          alt=""
-        />
-        <img
-          src={wave1}
-          id="wave1"
-          className="wave stg du"
-          style={{ "--i": 20 }}
-          alt=""
-        />
-        <img
-          src={foam2}
-          id="foam2"
-          className="wave stg du"
-          style={{ "--i": 19 }}
-          alt=""
-        />
-        <img
-          src={wave2}
-          id="wave2"
-          className="wave stg du"
-          style={{ "--i": 18 }}
-          alt=""
-        />
+        <div className="wave-entry stg du" style={{ "--i": 21 }}>
+          <img src={foam1} id="foam1" className="wave" alt="" />
+        </div>
+        <div className="wave-entry stg du" style={{ "--i": 20 }}>
+          <img src={wave1} id="wave1" className="wave" alt="" />
+        </div>
+        <div className="wave-entry stg du" style={{ "--i": 19 }}>
+          <img src={foam2} id="foam2" className="wave" alt="" />
+        </div>
+        <div className="wave-entry stg du" style={{ "--i": 18 }}>
+          <img src={wave2} id="wave2" className="wave" alt="" />
+        </div>
       </div>
     </Content>
   );

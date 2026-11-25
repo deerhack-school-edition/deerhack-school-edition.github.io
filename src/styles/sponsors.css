@@ -1,6 +1,9 @@
 #sponsors {
   position: relative;
   isolation: isolate;
+  height: auto;
+  min-height: 100dvh;
+  padding: 4rem 0;
   background-color: var(--background);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -50,10 +53,81 @@
 }
 
 #sponsors h1,
+#sponsors h2,
 #sponsors p,
-#sponsors br {
+#sponsors br,
+.sponsors-grid,
+.partners-row {
   position: relative;
   z-index: 2;
+}
+
+.partners-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3.5rem;
+  padding: 0 2rem;
+}
+
+.partner-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsors-subheading {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 600;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.sponsor-logo {
+  width: min(70vw, 320px);
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.04);
+}
+
+.sponsor-logo-square {
+  width: min(38vw, 130px);
+}
+
+.sponsor-logo-restaurant {
+  width: min(55vw, 220px);
+}
+
+.sponsor-logo-foods {
+  width: min(65vw, 260px);
+}
+
+.sponsor-logo-learning {
+  width: min(65vw, 260px);
+}
+
+.sponsor-logo-domain {
+  width: min(45vw, 170px);
 }
 
 .whale {
