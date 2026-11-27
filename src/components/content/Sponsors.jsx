@@ -3,6 +3,7 @@ import whaleLarge from "../../assets/flair/whale-animated-large.svg";
 import whalePhone from "../../assets/flair/whale-animated-phone.svg";
 import deerwalkLogo from "../../assets/sponsors/deerwalk.webp";
 import mediaPartnerLogo from "../../assets/sponsors/media-partner.svg";
+import dakshyaKhabarLogo from "../../assets/sponsors/dakshya-khabar.webp";
 import restaurantPartnerLogo from "../../assets/sponsors/restaurant-partner.webp";
 import foodsPartnerLogo from "../../assets/sponsors/foods-partner.webp";
 import learningPartnerLogo from "../../assets/sponsors/learning-partner.webp";
@@ -69,13 +70,23 @@ const Sponsors = () => {
           <h2 className="sponsors-subheading scroll stg ud" style={{ "--i": 3 }}>
             Media Partner
           </h2>
-          <div className="sponsors-grid scroll stg du" style={{ "--i": 4 }}>
+          <div className="sponsors-grid media-partners-grid scroll stg du" style={{ "--i": 4 }}>
             <img
               src={mediaPartnerLogo}
               alt="Media Partner"
               className="sponsor-logo sponsor-logo-square"
               width={513}
               height={513}
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+            <img
+              src={dakshyaKhabarLogo}
+              alt="DakshyaKhabar"
+              className="sponsor-logo sponsor-logo-media-wide"
+              width={1024}
+              height={165}
               loading="lazy"
               decoding="async"
               draggable={false}
@@ -91,8 +102,8 @@ const Sponsors = () => {
               src={restaurantPartnerLogo}
               alt="109 Express"
               className="sponsor-logo sponsor-logo-restaurant"
-              width={112}
-              height={54}
+              width={400}
+              height={198}
               loading="lazy"
               decoding="async"
               draggable={false}
