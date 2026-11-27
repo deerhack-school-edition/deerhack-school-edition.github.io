@@ -7,6 +7,7 @@ import restaurantPartnerLogo from "../../assets/sponsors/restaurant-partner.webp
 import foodsPartnerLogo from "../../assets/sponsors/foods-partner.webp";
 import learningPartnerLogo from "../../assets/sponsors/learning-partner.webp";
 import domainPartnerLogo from "../../assets/sponsors/domain-partner.webp";
+import technologyPartnerLogo from "../../assets/sponsors/technology-partner.svg";
 
 const Sponsors = () => {
   const [isInView, setIsInView] = useState(false);
@@ -143,6 +144,23 @@ const Sponsors = () => {
               className="sponsor-logo sponsor-logo-domain"
               width={300}
               height={175}
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+          </div>
+        </div>
+        <div className="partner-group">
+          <h2 className="sponsors-subheading scroll stg ud" style={{ "--i": 3 }}>
+            Technology Partner
+          </h2>
+          <div className="sponsors-grid scroll stg du" style={{ "--i": 4 }}>
+            <img
+              src={technologyPartnerLogo}
+              alt="SSOJet"
+              className="sponsor-logo sponsor-logo-technology"
+              width={126}
+              height={35}
               loading="lazy"
               decoding="async"
               draggable={false}

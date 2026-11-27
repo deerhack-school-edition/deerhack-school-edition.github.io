@@ -3,7 +3,7 @@
   isolation: isolate;
   height: auto;
   min-height: 100dvh;
-  padding: 4rem 0;
+  padding: 4rem 0 8rem;
   background-color: var(--background);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -128,6 +128,10 @@
 
 .sponsor-logo-domain {
   width: min(45vw, 170px);
+}
+
+.sponsor-logo-technology {
+  width: min(65vw, 260px);
 }
 
 .whale {
